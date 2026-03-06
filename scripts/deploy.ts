@@ -16,7 +16,7 @@ export async function run(provider: NetworkProvider) {
 
   const openedContract = provider.open(myContract);
 
-  openedContract.sendDeploy(provider.sender(), toNano("0.05"));
+  await openedContract.sendDeploy(provider.sender(), toNano("0.05"));
 
   await provider.waitForDeploy(myContract.address);
 }
