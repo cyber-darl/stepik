@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "compile": "ts-node ./scripts/compile.ts",
-    "test": "jest --verbose",
+    "test": "ts-node ./scripts/compile.ts && jest --verbose",
     "build": "blueprint build",
     "deploy": "blueprint run"
   },
